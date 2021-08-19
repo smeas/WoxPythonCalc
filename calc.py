@@ -1,7 +1,11 @@
 import math
 from wox import Wox
 from multiprocessing import Process, Manager
-from win32clipboard import OpenClipboard, CloseClipboard, SetClipboardText, EmptyClipboard
+try:
+	from win32clipboard import OpenClipboard, CloseClipboard, SetClipboardText, EmptyClipboard
+	has_clipboard_access = True
+except ImportError:
+	has_clipboard_access = False
 
 TIMEOUT = 1
 
@@ -44,6 +48,9 @@ def run(expr):
 
 class Main(Wox):
 	def set_clip(self, text):
+		if not has_clipboard_access:
+			return
+
 		OpenClipboard()
 		EmptyClipboard()
 		SetClipboardText(text)
