@@ -1,0 +1,12 @@
+{
+	"ID":"E6084D3F2E0E4D1888B544CC17D159B7",
+	"ActionKeyword":"=",
+	"Name":"Python Calculator",
+	"Description":"Evaluate python expressions",
+	"Author":"smeas",
+	"Version":"1.0.0",
+	"Language":"python",
+	"Website":"",
+	"IcoPath": "Images\\calculator.png",
+	"ExecuteFileName":"calc.py"
+}
