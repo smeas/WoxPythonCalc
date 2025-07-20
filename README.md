@@ -1,5 +1,7 @@
 # Wox Python Calculator
 
+Note: This plugin was made for Wox 1.3. It has not been tested with newer versions and may or may not work with Wox 2.0.
+
 ## Installation
 
 - Configure your python directory under Wox general settings. Python 3.6+ is required.
